@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    {{msg}}
+
+</div>
+<script src="vue.js"></script>
+<script>
+    let vm=new  Vue({
+        el:'#app',
+        data:{
+            arr:[12,34,56]
+        }
+    });
+//    操作数组本身都不起作用，改变数组才能起作用
+//    push，pop，shift，unshift，sort，splice
+//     vm.arr.push(666);
+    console.log(vm.$data);
+</script>
+</body>
+</html>

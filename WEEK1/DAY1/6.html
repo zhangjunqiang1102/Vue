@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <!--{{}} 里面的值会解析成普通的文本 v-text-->
+    {{msg}}
+    <!--<div v-text="msg"></div>-->
+    <!--可以识别标签-->
+    <!--<div v-html="msg"></div>-->
+    {{name}}
+    <div>{{name}}</div>
+    <!--<div v-model>{{name}}</div>--> 会忽略所有表单元素的
+
+    <!--数据只会绑定一次-->
+    <div v-once> {{name}}</div>
+
+
+</div>
+<script src="vue.js"></script>
+<script>
+    let vm=new Vue({
+        el:'#app',
+        data:{
+           name:'zz'
+        }
+    })
+</script>
+</body>
+</html>

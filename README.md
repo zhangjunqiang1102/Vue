@@ -38,4 +38,9 @@
 
 
 ## 起步
-设置本地的配置文件-package.json(安装的
+设置本地的配置文件-package.json(安装的依赖）
+
+## 双向数据绑定
+- 只有表单元素才能实现
+看到表单元素写v-model
+- vue 通过数据劫持实现数据绑定，通过Object.defineProperty()和get和set方法监听数据变化，当数据变化时执行监听的回调函数
