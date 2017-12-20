@@ -40,7 +40,21 @@
 ## 起步
 设置本地的配置文件-package.json(安装的依赖）
 
+进入项目目录->npm init
+->一键安装 npm init -y
+
+cdn
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+npm install vue -D  开发环境所需要的依赖 devDependencies
+npm install vue -S  生产环境所需要的依赖 dependencies
+
+npm install 跑环境 把package.json所有的依赖安装上
+
 ## 双向数据绑定
-- 只有表单元素才能实现
-看到表单元素写v-model
-- vue 通过数据劫持实现数据绑定，通过Object.defineProperty()和get和set方法监听数据变化，当数据变化时执行监听的回调函数
+- 只有表单元素才能实现双向数据绑定
+- 看到表单元素写v-model
+- vue通过数据劫持实现数据绑定，通过Object.defineProperty()的get和set方法监听数据变化,当数据变化时执行监听的回调函数
+- vue兼容性 <=ie8不支持
+
+
+

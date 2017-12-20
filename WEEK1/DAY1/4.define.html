@@ -10,9 +10,9 @@
     let obj={};
     let temp={name:'oo'};//借助中间对象
     let input1=document.getElementById('input1');
-    Object.defineProperty(obj,'name',{
+    Object.defineProperty(obj,'name',{  // defineProperty:   定义属性
         get(){
-          return temp['name'];
+          return temp.name;
         },
         set(val){
           temp.name=val;
@@ -25,7 +25,7 @@
            console.log(obj.name);
        },false);
 
-//
+
     //get() 第一次是浏览器渲染页面时调用 以后name属性值发生改变时都会再重新获取
     //set(val) 设置属性值时调用 val就是设置的这个属性值
 
