@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<!--指令-->
 <body>
 <div id="app">
     <!--{{}} 里面的值会解析成普通的文本 v-text-->
-    {{msg}}
+    <!--{{msg}}-->
     <!--<div v-text="msg"></div>-->
     <!--可以识别标签-->
     <!--<div v-html="msg"></div>-->
-    {{name}}
-    <div>{{name}}</div>
-    <!--<div v-model>{{name}}</div>--> 会忽略所有表单元素的
+    <!--{{name}}-->
+    <!--<div>{{name}}</div>-->
+    <!--<div v-model>{{name}}</div> 会忽略所有表单元素的-->
 
     <!--数据只会绑定一次-->
     <div v-once> {{name}}</div>
@@ -25,7 +26,7 @@
     let vm=new Vue({
         el:'#app',
         data:{
-           name:'zz'
+           name:'nn'
         }
     })
 </script>

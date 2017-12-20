@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input type="checkbox" v-model="a">{{a}} <br>
+     爱好 <input type="checkbox" v-model="b" value="aa">aa
+          <input type="checkbox" v-model="b" value="bb">bb
+         <input type="checkbox" v-model="b" value="cc">cc
+    {{b}}
+</div>
+<!--<section>-->
+    <!--<option value="1">11</option>-->
+    <!--<option value="w'2">22</option>-->
+    <!--<option value="3">33</option>-->
+<!--</section>-->
+<script src="vue.js"></script>
+<script>
+        let vm=new Vue({
+                el:'#app',
+                data:{
+                        a:false,
+                    b:[]
+                }
+            });
+
+</script>
+</body>
+</html>

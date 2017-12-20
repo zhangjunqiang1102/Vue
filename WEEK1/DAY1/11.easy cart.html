@@ -42,7 +42,6 @@
                         <input type="button" class="btn btn-info" value="添加" @click="add">
                         <input type="reset" class="btn btn-warning" value="重置">
                     </div>
-
                 </form>
             </div>
         </div>
@@ -66,13 +65,13 @@
                 remove(item){
                 this.products=this.products.filter(p=>{
                        return p!=item
-                   })
+                   });
                 },
                 removeAll(){
                       this.products=[];
                 }
               }
-            })
+            });
 </script>
 </body>
 </html>
