@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+
+    <!--便利数组的  in  of  都可以-->
+        <!--<li v-for="item in arr">-->
+            <!--{{item}}-->
+        <!--</li>-->
+        <!--对象-->
+        <!--<li>{{obj.name}}</li>-->
+        <!--<li>{{obj.age}}</li>-->
+
+        <ul>
+        <li v-for="(item,index) in products">
+            {{item.name}}
+            <ul>
+                <li v-for="c in item.color">
+                    {{c}}
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<script src="vue.js"></script>
+<script>
+
+    let vm=new Vue({
+        el:'#app',
+        data: {
+            arr: [12, 23, 45],
+        }
+    })
+
+</script>
+</body>
+</html>

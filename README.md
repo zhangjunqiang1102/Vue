@@ -57,4 +57,8 @@ npm install 跑环境 把package.json所有的依赖安装上
 - vue兼容性 <=ie8不支持
 
 
+## 指令
+对谁
+
+
 

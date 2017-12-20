@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <!--用@代替v-on-->
+    <div @clock='fn'>{{msg}}</div>
+</div>
+</body>
+<script src="vue.js"></script>
+<script>
+    let vm=new Vue({
+        el:'#app',
+        data:{
+            msg:'hello'
+        },
+        methods:{//方法同样也被实例代理
+            //禁止使用箭头函数
+            //方法名和data里面的变量名一样
+            fn(){
+            //指的是实例
+                this.msg='hello  zzzz'
+            }
+        }
+    });
+</script>
+</html>
