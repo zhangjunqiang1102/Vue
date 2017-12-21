@@ -10,11 +10,11 @@
     单个checkbox时，会把变量a转换成boolean，true选中  false 则不选中
     -->
     <!--多个复选框 绑定数据是数组类型，需要设置value，根据value值确定是那个多选框，若选中多选框会把value放入数组中-->
-    <!--<input type="checkbox" v-model="a">-->
-    <!--<input type="checkbox" v-model="c" value="吃饭">吃饭-->
-    <!--<input type="checkbox" v-model="c" value="睡觉">睡觉-->
-    <!--<input type="checkbox" v-model="c" value="玩">玩-->
-    <!--{{c}}-->
+    <input type="checkbox" v-model="a">
+    <input type="checkbox" v-model="c" value="吃饭">吃饭
+    <input type="checkbox" v-model="c" value="睡觉">睡觉
+    <input type="checkbox" v-model="c" value="玩">玩
+    {{c}}
 
     <!--单选按钮
      v-model值设置成一样，通过value区别是那个，并把选中的按钮的value值赋给绑定的变量

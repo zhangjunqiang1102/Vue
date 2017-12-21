@@ -1,0 +1,12 @@
+{
+  "name": "DAY2",
+  "version": "1.0.0",
+  "description": "v-model 只要是表单元素就用 v-model\r - v-text 代替{{}} 渲染成文本\r - v-html 渲染成标签\r - v-once 只会绑定一次 避免视图一直刷新内容\r - v-for 便利数组，对象，字符串，数字",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
