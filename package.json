@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/zjqzlyzjq/Vue/issues"
   },
-  "homepage": "https://github.com/zjqzlyzjq/Vue#readme"
+  "homepage": "https://github.com/zjqzlyzjq/Vue#readme",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "bootstrap": "^3.3.7",
+    "vue": "^2.5.13"
+  }
 }

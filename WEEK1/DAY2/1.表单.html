@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <!--checked 失效
+    单个checkbox时，会把变量a转换成boolean，true选中  false 则不选中
+    -->
+    <!--多个复选框 绑定数据是数组类型，需要设置value，根据value值确定是那个多选框，若选中多选框会把value放入数组中-->
+    <!--<input type="checkbox" v-model="a">-->
+    <!--<input type="checkbox" v-model="c" value="吃饭">吃饭-->
+    <!--<input type="checkbox" v-model="c" value="睡觉">睡觉-->
+    <!--<input type="checkbox" v-model="c" value="玩">玩-->
+    <!--{{c}}-->
+
+    <!--单选按钮
+     v-model值设置成一样，通过value区别是那个，并把选中的按钮的value值赋给绑定的变量
+    -->
+    <input type="radio" v-model="gender" value="男">男
+    <input type="radio" v-model="gender" value="女">女
+{{gender}}
+    <!--下拉框 select
+     若option设置value值，则获取选中的option对应的值，并把value值赋值给绑定的变量，若没设置value，
+    -->
+       <select v-model="s">
+        <option disabled>请选择</option>
+        <option value="1">A</option>
+        <option value="2">B</option>
+        <option value="3">C</option>
+    </select>
+    {{s}}
+
+    <!--select 选择多个OPTION-->
+    <select multiple v-model="ary">
+        <option disabled>请选择</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+
+    </select>
+{{ary}}
+</div>
+
+<script src="js/vue.js"></script>
+<script>
+        let vm=new Vue({
+                el:'#app',
+                data:{
+                  a:'1',
+                  c:[],
+                    gender:'',
+                    s:'0',
+                    ary:[]
+                }
+            })
+</script>
+</body>
+</html>
