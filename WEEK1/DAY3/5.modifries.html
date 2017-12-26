@@ -6,21 +6,32 @@
 </head>
 <body>
 <div id="app">
-    <div @click="outer">outer
-        <div @click="center">center
-            <div @click="inner">inner
-            </div>
+    <!--.capture.stop stop阻止事件传播 不管是从外往里还是从里往外都阻止掉-->
+    <div @click = "outer">outer
+        <div @click = "center"> center
+            <div @click.once = "inner">inner</div>
         </div>
     </div>
+    <a href="http://www.zhufengpeixun.cn" @click.prevent="inner">珠峰培训</a>
 </div>
-<script src="vue.js"></script>
-<script>
-    let vm = new Vue({
-        el: '#app',
-        data: {
-            products: []
-        },
-    })
-</script>
 </body>
 </html>
+<script src="vue.js"></script>
+<script>
+    let vm  = new Vue({
+        el:"#app",
+        data:{},
+        methods:{
+            outer(){
+                alert("outer")
+            },
+            center(){
+                alert("center")
+            },
+            inner(e){
+
+                alert("inner")
+            }
+        }
+    })
+</script>

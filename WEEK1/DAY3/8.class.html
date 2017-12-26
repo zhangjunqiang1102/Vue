@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zhang</title>
+    <style type="text/css">
+        .a{
+          font-size: 50px;
+        }
+        .b{
+           background: rebeccapurple;
+        }
+        .c{
+            background: #0b97c4;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+  <div class="a b" :class="{c:flag,d:!flag}">abcd</div>
+
+    <div :style="[sty1,sty2,{background:'blue'}]">  1234 </div>
+</div>
+</body>
+</html>
+<script src="vue.js"></script>
+<script>
+        let vm=new Vue({
+                el:'#app',
+                data:{
+                   flag:true,
+                    num:100,
+                    sty1:{fontSize:'100px'},
+                    sty2:{color:'red'}
+                }
+            })
+</script>

@@ -6,8 +6,10 @@
 </head>
 <body>
 <div id="app">
-    <input type="text" v-model="a">{{msg}
+    <!--若输入字符的长度小于5，则出现提醒太少了，否则什么都不提醒-->
+    <input type="text" v-model="a">{{msg}}
 </div>
+<!--不要对双向绑定的属性（a）计算，监听其他的属性msg,msg依赖于a的值-->
 </body>
 </html>
 <script src="vue.js"></script>
@@ -16,7 +18,6 @@
         el: '#app',
         data: {
             a: '',
-
         },
         computed: {
             msg() {

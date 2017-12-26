@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zhang</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+<div id="app">
+    <button @click="flag=!flag">ann</button>
+    <div v-show="flag">111</div>
+    <div v-show="!flag">www</div>
+
+
+</div>
+
+<script src="vue.js"></script>
+<script>
+        let vm=new Vue({
+                el:'#app',
+                data:{
+                    flag:true
+                }
+            })
+</script>
+</body>
+</html>

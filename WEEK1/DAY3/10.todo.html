@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zhang</title>
+    <link rel="stylesheet" href="./bootstrap.css">
+    <style>
+        .del {
+            color: #ddd;
+            text-decoration: line-through;
+        }
+
+        [v-click] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="app" v-cloak>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header" style="color:#fff; font-size:25px;">
+                TodoList
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-info">
+                    <!--head-->
+                    <div class="panel-heading">
+                        <div class="text-warning">亲，你有{{count}}个任务需要完成</div>
+                        <input type="text" class="form-control" v-model="title" @keydown.enter="add">
+                    </div>
+                    <!--body-->
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li class="list-group-item" v-for="(todo,index) in filterTodos">
+                               <span :class="{del:todo.isSelected}" v-show="cur!=todo" @dblclick="remember(todo)">
+                                   <input type="checkbox" v-model="todo.isSelected">
+                                   {{todo.content}}
+                               </span>
+                                <input type="text" v-model="todo.content" v-show="cur==todo" @keydown.enter="cancel"
+                                       @blur="cancel">
+                                <button class="btn btn-danger btn-xs pull-right" @click="remove(todo)">删除</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="panel-footer">
+                        <ul class="nav nav-pills">
+                            <li role="presentation" :class="{active:hash==='#/all'}"><a href="#/all">全部任务</a></li>
+                            <li role="presentation" :class="{active:hash==='#/finish'}"><a href='#/finish'>已完成</a></li>
+                            <li role="presentation" :class="{active:hash==='#/unfinish'}"><a href="#/unfinish">未完成</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="vue.js"></script>
+<script src="todo.js"></script>
+</body>
+</html>
