@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+<div id="app">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-bordered">
+                    <caption class="text-center text-warning">gwc</caption>
+                    <tr>
+                        <th><input type="checkbox" v-model="ckeckAll">全选</th>
+                        <th>sp</th>
+                        <th>sp</th>
+                        <th>sp</th>
+                        <th>sp</th>
+                        <th>sp</th>
+                    </tr>
+                    <tr v-for="product in products">
+                        <td><input type="checkbox" v-model="product.isSelected"></td>
+                        <td><img :src="product.productCover"></td>
+                        <td>
+                         {{product.productPrice}}
+                        </td>
+                        <td><input type="number" v-model.number.lazy="product.productNum" min="1"></td>
+                        <td>{{product.productPrice*product.productNum | toFixed(2) }}</td>
+                        <td>
+                            <button class="btn btn-danger btn-xs" @click="remove(product)">删除</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">总价:{{sum|toFixed(2)}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

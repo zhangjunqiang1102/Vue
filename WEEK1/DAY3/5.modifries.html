@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zhang</title>
+</head>
+<body>
+<div id="app">
+    <div @click="outer">outer
+        <div @click="center">center
+            <div @click="inner">inner
+            </div>
+        </div>
+    </div>
+</div>
+<script src="vue.js"></script>
+<script>
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            products: []
+        },
+    })
+</script>
+</body>
+</html>

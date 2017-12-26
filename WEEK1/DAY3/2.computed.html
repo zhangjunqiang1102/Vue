@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zhang</title>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="a">{{msg}
+</div>
+</body>
+</html>
+<script src="vue.js"></script>
+<script>
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            a: '',
+
+        },
+        computed: {
+            msg() {
+                // get(){
+                //     if(this.a.length=1){
+                //         return 'qq'
+                //     }
+                //     if(this.a.length<5){
+                //         return '调试'
+                //     }else {
+                //         return '成功'
+                //     }
+                // }
+                return this.a.length > 5 ? 'jj' : 'kk';
+            }
+        }
+    });
+</script>

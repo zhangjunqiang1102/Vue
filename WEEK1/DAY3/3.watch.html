@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zhang</title>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="a">{{msg}}
+</div>
+</body>
+</html>
+<script src="vue.js"></script>
+<script>
+        let vm=new Vue({
+                el:'#app',
+                data:{
+                   a:'',
+                    msg:''
+                },
+            watch:{//监听的属性要已经在data里面声明   watch支持异步  computed 不支持异步 监听的数据变化时，执行
+                a(){//a变化时去设置其他的属性
+                    setTimeout()
+                    if(this.a.length<5){
+                        this.msg='kk'
+                    }
+                    this.msg='cg'
+                }
+
+            }
+            })
+</script>

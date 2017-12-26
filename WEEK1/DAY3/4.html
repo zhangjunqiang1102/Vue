@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zhang</title>
+</head>
+<body>
+<div id="demo">
+    <input type="text">
+    <input type="text">+++++++++
+    <input type="text">  {{ fullName }}
+
+</div>
+
+
+</body>
+</html>
+<script src="vue.js"></script>
+
+<script>
+    var vm = new Vue({
+        el: '#demo',
+        data: {
+            firstName: 'Foo',
+            lastName: 'Bar',
+            fullName: 'Foo Bar'
+        },
+        watch:{
+            firstName(newVal,oldVal){
+                //console.log(newVal+"   "+oldVal);
+                this.fullName = newVal+this.lastName
+            },
+            /*lastName(newVal){  第一种写法
+                this.fullName = this.firstName+newVal;
+            }*/
+            lastName:{ //第二种与第一种写法相同 第二种还能设置其他属性
+                handler(newVal){
+                    this.fullName = this.firstName+newVal;
+                }
+            }
+        }
+    })
+    /*vm.$watch("lastName",(newVal,oldVal)=>{
+        vm.fullName= newVal+vm.firstName;
+    })*/
+
+</script>

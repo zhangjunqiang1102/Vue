@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zhang</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+<div id="app">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-bordered">
+                    <caption class="text-center text-warning">111</caption>
+                    <tr>
+                        <th><input type="checkbox" v-modle="checkAll">222</th>
+                        <th>333</th>
+                        <th>444</th>
+                        <th>555</th>
+                        <th>666</th>
+                        <th>777</th>
+                    </tr>
+                    <tr v-for="product in products">
+                        <td><input type="checkbox" v-modle="product ">111</td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/vue.js"></script>
+<script src="js/axios.js"></script>
+<script>
+        let vm=new Vue({
+                el:'#app',
+                data:{
+                   products:[]
+                },
+
+            })
+</script>
+</body>
+</html>

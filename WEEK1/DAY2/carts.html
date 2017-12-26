@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap.css">
 </head>
 <body>
-<div id="app">
+<div id="app"2222222/>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <table class="table table-bordered">
-                    <caption class="text center">
+                    <caption class="text center text-warning">gwc
+                    </caption>
                         <tr>
                             <th><input type="checkbox" v-model="checkAll">全选</th>
                             <th>商品</th>
@@ -35,9 +36,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="6">总价：{{sum | toFixed(2)}}</td>
+                            <td colspan="6">总价:{{sum|toFixed(2)}}</td>
                         </tr>
-                    </caption>
                 </table>
             </div>
         </div>
@@ -94,7 +94,7 @@
             sum(){//这样相当于获取这个属性值 get() 若依赖的值没有发生改变，它获取的是之前缓存下来的数据，依赖的值发生改变才会重新获取
                 return  this.products.reduce((prev, next) => {
                     if(!next.isSelected) return prev;//若没有选中则不算在总价里
-                    return prev + next.productPrice * next.productNum
+                    return prev + next.productPrice*next.productNum
                 }, 0)
              },
             checkAll:{
@@ -102,7 +102,7 @@
                     if(this.products.length===0){
                         return false
                     }else {
-                        return this.products.every(item=>{
+                        return this. products.every(item=>{
                             return item.isSelected;
                         });
                     }
